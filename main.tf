@@ -29,6 +29,7 @@ resource "aws_instance" "test" {
   instance_type = "t3.medium"
   tags = { Name = "test",
     owner = "nick",
+    foo   = "bar"
   }
   lifecycle {
     ignore_changes = [ami]
