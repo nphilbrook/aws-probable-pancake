@@ -10,8 +10,9 @@ provider "aws" {
   default_tags {
     tags = local.tags_labels
   }
-  assume_role {
-    role_arn = "arn:aws:iam::517068637116:role/dyn-ec2-access"
-  }
+  # In the workspace variables
+  # assume_role {
+  #   role_arn = "arn:aws:iam::517068637116:role/dyn-ec2-access"
+  # }
 }
 
