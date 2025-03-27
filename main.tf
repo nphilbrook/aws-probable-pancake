@@ -24,14 +24,17 @@ data "aws_ami" "rhel9" {
   owners = ["309956199498"] # Red Hat
 }
 
-resource "aws_instance" "test" {
-  ami           = data.aws_ami.rhel9.id
-  instance_type = "t3.medium"
-  tags = { Name = "test",
-    owner = "nick",
-    foo   = "bar"
-  }
-  lifecycle {
-    ignore_changes = [ami]
-  }
-}
+
+# Nuked this one from the console - when creds
+# are working again just nuke it from state
+# resource "aws_instance" "test" {
+#   ami           = data.aws_ami.rhel9.id
+#   instance_type = "t3.medium"
+#   tags = { Name = "test",
+#     owner = "nick",
+#     foo   = "bar"
+#   }
+#   lifecycle {
+#     ignore_changes = [ami]
+#   }
+# }
