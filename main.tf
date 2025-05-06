@@ -4,5 +4,8 @@ module "code_bucket" {
 
   bucket_prefix = "no-objects-plz"
   force_destroy = true
+  tags = {
+    module_verison = local.verison_map["code_bucket"]
+  }
 }
 
