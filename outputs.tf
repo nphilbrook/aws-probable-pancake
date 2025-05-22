@@ -17,5 +17,5 @@ output "caller_identity_doormat" {
 }
 
 output "caller_identity_doormat_full" {
-  value = data.aws_caller_identity.current
+  value = data.aws_caller_identity.doormat
 }
