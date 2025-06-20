@@ -10,3 +10,8 @@ variable "tfc_vault_backed_aws_dynamic_credentials" {
     }))
   })
 }
+
+variable "prefix" {
+  type    = string
+  default = null
+}
