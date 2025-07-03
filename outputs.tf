@@ -1,3 +1,8 @@
+data "aws_caller_identity" "default" {
+
+}
+
+
 data "aws_caller_identity" "current" {
   provider = aws.primary
 }
