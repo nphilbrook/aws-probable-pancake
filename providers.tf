@@ -19,3 +19,8 @@ provider "aws" {
   region                   = "us-east-1"
   shared_credentials_files = [var.tfc_vault_backed_aws_dynamic_credentials.aliases["620929731891"].shared_credentials_file]
 }
+
+provider "aws" {
+  region                   = "us-east-1"
+  shared_credentials_files = [var.tfc_vault_backed_aws_dynamic_credentials.default.shared_credentials_file]
+}
