@@ -1,4 +1,7 @@
-data "aws_caller_identity" "current" {}
+data "aws_caller_identity" "current" {
+  provider = aws.primary
+}
+
 data "aws_caller_identity" "alternate" {
   provider = aws.alternate
 }

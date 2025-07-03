@@ -7,6 +7,7 @@ locals {
 
 provider "aws" {
   region = "us-west-2"
+  alias  = "primary"
   default_tags {
     tags = local.tags_labels
   }
