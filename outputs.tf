@@ -27,6 +27,6 @@ output "caller_identity_alternate" {
 output "caller_identity_alternate_full" {
   value = data.aws_caller_identity.alternate
 }
- output "caller_identity_default_full" {
+output "caller_identity_default_full" {
   value = data.aws_caller_identity.default
 }
